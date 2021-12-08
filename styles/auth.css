@@ -88,3 +88,14 @@
 .submit-button::hover {
   background-color: #938ffe;
 }
+
+.logout {
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 4px;
+  border-width: 0px;
+  cursor: pointer;
+  background-color: #726dfe;
+  color: white;
+  outline: none;
+}

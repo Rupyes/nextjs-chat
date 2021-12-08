@@ -13,9 +13,14 @@ const MessageFormSocial = dynamic(() =>
 );
 
 export default function Chats() {
-  const { username, secret } = useContext(Context);
+  const { username, secret, setUsername, setSecret } = useContext(Context);
   const [showChat, setShowChat] = useState(false);
   const router = useRouter();
+
+  const logoutHandler = () => {
+    setUsername('');
+    setSecret('');
+  };
 
   useEffect(() => {
     if (typeof document !== null) {
@@ -40,6 +45,9 @@ export default function Chats() {
           renderNewMessageForm={() => <MessageFormSocial />}
         />
       </div>
+      <button className='logout' onClick={logoutHandler}>
+        Log out
+      </button>
     </div>
   );
 }
